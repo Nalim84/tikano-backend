@@ -1,0 +1,7 @@
+1 - CRIAR OS RELACIONAMENTOS EM MODELS E MAPPINGS
+2 - ADD-MIGRATION PARA ADD A MIGRATION 
+add-migration 2023_05_25_Inicial -Context CadastroDbContext
+3 - update-database -Context CadastroDbContext PARA APLICAR A MIGRATION CRIADA.
+
+OBS: SE UMA MIGRATION FOI ADICIONADA É POSSÍVEL UTILIZAR O remove-migration PARA RODAR O DOWN, MAS SE O COMANDO -update-database foi executado somente 
+é possível desfazer criando uma nova migration

@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33530.505
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadastro.Api", "src\Cadastro.Api\Cadastro.Api.csproj", "{9E7E40BD-050B-4E45-9F79-42983DC77C00}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadastro.Business", "src\Cadastro.Business\Cadastro.Business.csproj", "{458A5682-ADFA-44EB-95C4-947D1D45E40C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cadastro.Data", "src\Cadastro.Data\Cadastro.Data.csproj", "{A971DFFF-CF98-44FF-AD14-917342AC176B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConnectionStringCheck", "src\ConnectionStringCheck\ConnectionStringCheck.csproj", "{AA81A6AE-4D11-4621-8C32-348B436089C0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tuto", "tuto", "{55D20AF7-1C65-4839-B6DF-326B5B845764}"
+	ProjectSection(SolutionItems) = preProject
+		migration-passo-a-passo.txt = migration-passo-a-passo.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cadastro.Data.Migrations", "src\Cadastro.Data.Migrations\Cadastro.Data.Migrations.csproj", "{874EA1F3-F106-44AC-9ADC-5E086F1D1D3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9E7E40BD-050B-4E45-9F79-42983DC77C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E7E40BD-050B-4E45-9F79-42983DC77C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E7E40BD-050B-4E45-9F79-42983DC77C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E7E40BD-050B-4E45-9F79-42983DC77C00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{458A5682-ADFA-44EB-95C4-947D1D45E40C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{458A5682-ADFA-44EB-95C4-947D1D45E40C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{458A5682-ADFA-44EB-95C4-947D1D45E40C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{458A5682-ADFA-44EB-95C4-947D1D45E40C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A971DFFF-CF98-44FF-AD14-917342AC176B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A971DFFF-CF98-44FF-AD14-917342AC176B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A971DFFF-CF98-44FF-AD14-917342AC176B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A971DFFF-CF98-44FF-AD14-917342AC176B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA81A6AE-4D11-4621-8C32-348B436089C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA81A6AE-4D11-4621-8C32-348B436089C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA81A6AE-4D11-4621-8C32-348B436089C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA81A6AE-4D11-4621-8C32-348B436089C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{874EA1F3-F106-44AC-9ADC-5E086F1D1D3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{874EA1F3-F106-44AC-9ADC-5E086F1D1D3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{874EA1F3-F106-44AC-9ADC-5E086F1D1D3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{874EA1F3-F106-44AC-9ADC-5E086F1D1D3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E982DCDA-A2E0-4E0D-A7D9-3F6E9218A222}
+	EndGlobalSection
+EndGlobal
