@@ -3,6 +3,7 @@
     public class AtividadePrincipal : Entity
     {
         public string Atividade { get; set; }
-        public bool Ativo { get; set; }
+      
+        public ICollection<Empresa> Empresas { get; set; }
     }
 }

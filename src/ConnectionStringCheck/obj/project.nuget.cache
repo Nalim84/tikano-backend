@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H3Kbgg7VluHnCs5BpPFGkRnevfmi25MqwdISm5ywh2CA3zlAXJcj2yivJg7BfOnDRqVhvoVS/ABehmwzEyzl0Q==",
+  "dgSpecHash": "MrAAwjq7Et76HrHwSNY90Lgmpo4V/TNtQIs+ys1BIuQuJTtOn+O7rBUdiKTs7E7E2/iR/p+8JzgSwLaSyjIvug==",
   "success": true,
-  "projectFilePath": "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj",
+  "projectFilePath": "C:\\ProjetoTikano\\tikano-backend\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALEX\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\ALEX\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",

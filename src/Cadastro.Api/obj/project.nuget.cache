@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b53F8GGZ+0U84sdWAC14xxdbDhUnq5slPNxh08qRDiSK7GwNhFGd3pMNeEgMkIvq+WNJU6NF6HwckKkqryDeGA==",
+  "dgSpecHash": "4r3EWGWJyJL3m0R+vCd/uzVhi+rIjIHgylBWuxBjhtqEvfEh9nxu363y0KuHPHqrlHRhYi68l3PBJztBqyUVSQ==",
   "success": true,
-  "projectFilePath": "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\Cadastro.Api\\Cadastro.Api.csproj",
+  "projectFilePath": "C:\\ProjetoTikano\\tikano-backend\\src\\Cadastro.Api\\Cadastro.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALEX\\.nuget\\packages\\aspnetcore.healthchecks.sqlserver\\6.0.2\\aspnetcore.healthchecks.sqlserver.6.0.2.nupkg.sha512",
     "C:\\Users\\ALEX\\.nuget\\packages\\aspnetcore.healthchecks.ui\\6.0.4\\aspnetcore.healthchecks.ui.6.0.4.nupkg.sha512",

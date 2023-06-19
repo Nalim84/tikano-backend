@@ -7,7 +7,7 @@ namespace Cadastro.Business.Models
         public DateTime DataInicio { get; set; }
         public DateTime DataFim { get; set; }
         public string MeioPagamento { get; set; }
-        //public Guid EmpresaContratanteId { get; set; }
-        //public EmpresaContratante EmpresaContratante { get; set; }
+
+        public Empresa Empresa { get; set; }
     }
 }

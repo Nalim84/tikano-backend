@@ -12,3 +12,17 @@ C:\ProjetoTikano\tikano-backend-main\tikano-backend-main\src\Cadastro.Business\o
 C:\ProjetoTikano\tikano-backend-main\tikano-backend-main\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.pdb
 C:\ProjetoTikano\tikano-backend-main\tikano-backend-main\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.genruntimeconfig.cache
 C:\ProjetoTikano\tikano-backend-main\tikano-backend-main\src\Cadastro.Business\obj\Debug\net6.0\ref\Cadastro.Business.dll
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.csproj.AssemblyReference.cache
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.GeneratedMSBuildEditorConfig.editorconfig
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.AssemblyInfoInputs.cache
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.AssemblyInfo.cs
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.csproj.CoreCompileInputs.cache
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.dll
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\refint\Cadastro.Business.dll
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.pdb
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\bin\Debug\net6.0\Cadastro.Business.deps.json
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\bin\Debug\net6.0\Cadastro.Business.runtimeconfig.json
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\bin\Debug\net6.0\Cadastro.Business.dll
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\bin\Debug\net6.0\Cadastro.Business.pdb
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\Cadastro.Business.genruntimeconfig.cache
+C:\ProjetoTikano\tikano-backend\src\Cadastro.Business\obj\Debug\net6.0\ref\Cadastro.Business.dll

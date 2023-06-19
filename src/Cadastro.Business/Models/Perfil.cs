@@ -1,15 +1,15 @@
-﻿using Cadastro.Business.Models;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cadastro.Business
+namespace Cadastro.Business.Models
 {
     public class Perfil : Entity
     {
         public string Nome { get; set; }
-        public string Ativo { get; set; }
+       
+        public ICollection<Usuario> Usuarios { get; set; }
     }
 }

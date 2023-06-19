@@ -18,13 +18,28 @@ namespace Cadastro.Data.Context
             ChangeTracker.AutoDetectChangesEnabled = false;
         }
 
-      
-        public DbSet<Senha> Senhas { get; set; }        
-        public DbSet<ModuloAtivo> ModulosAtivos { get; set; }        
-        public DbSet<RepresentanteLegal> RepresentantesLegais { get; set; }        
-        public DbSet<Usuario> PerfislUsuarioMasterAdmin { get; set; }        
+        public DbSet<AtividadePrincipal> AtividadesPrincipais { get; set; }        
+        public DbSet<Cidade> Cidades { get; set; }        
+        public DbSet<Empresa> Empresas { get; set; }        
+        public DbSet<Estado> Estados { get; set; }        
+        public DbSet<FaturamentoUltimoAnoEmpresa> FaturamentosUltimoAnoEmpresa { get; set; }        
+        public DbSet<Fuso> Fusos { get; set; }        
+        public DbSet<Idioma> Idiomas { get; set; }        
+        public DbSet<LoginUsuario> LoginUsuarios { get; set; }        
+        public DbSet<Marca> Marcas { get; set; }        
+        public DbSet<Modulo> Modulos { get; set; }        
+        public DbSet<ModuloEmpresa> ModulosAtivos { get; set; }        
         public DbSet<Pagamento> Pagamentos { get; set; }        
-        public DbSet<EmpresaContratante> EmpresasContratantes { get; set; }
+        public DbSet<Pais> Paises { get; set; }        
+        public DbSet<Perfil> Perfis { get; set; }        
+        public DbSet<QuantidadeFuncionarioEmpresa> QuantidadesFuncionariosEmpresaMapping { get; set; }        
+        public DbSet<RepresentanteLegal> RepresentantesLegais { get; set; }        
+        public DbSet<Segmento> Segmentos { get; set; }        
+        public DbSet<SubstitutoTributario> SubstitutosTributario { get; set; }        
+        public DbSet<TamanhoEmpresa> TamanhosEmpresa { get; set; }        
+        public DbSet<TipoEmpresa> TiposEmpresa { get; set; }        
+        public DbSet<Usuario> Usuarios { get; set; }        
+     
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,6 +66,7 @@ namespace Cadastro.Data.Context
 
                 if (entry.State == EntityState.Modified)
                 {
+                    entry.Property("DataAlteracao").CurrentValue = DateTime.Now;
                     entry.Property("DataCadastro").IsModified = false;
                 }
             }

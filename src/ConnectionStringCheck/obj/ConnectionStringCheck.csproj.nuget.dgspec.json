@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj": {}
+    "C:\\ProjetoTikano\\tikano-backend\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj": {}
   },
   "projects": {
-    "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj": {
+    "C:\\ProjetoTikano\\tikano-backend\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj",
+        "projectUniqueName": "C:\\ProjetoTikano\\tikano-backend\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj",
         "projectName": "ConnectionStringCheck",
-        "projectPath": "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj",
+        "projectPath": "C:\\ProjetoTikano\\tikano-backend\\src\\ConnectionStringCheck\\ConnectionStringCheck.csproj",
         "packagesPath": "C:\\Users\\ALEX\\.nuget\\packages\\",
-        "outputPath": "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\ConnectionStringCheck\\obj\\",
+        "outputPath": "C:\\ProjetoTikano\\tikano-backend\\src\\ConnectionStringCheck\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

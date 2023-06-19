@@ -7,6 +7,8 @@
         public string TelefoneResponsavel { get; set; }
         public string Telefone { get; set; }
         public string Email { get; set; }
+
+        public ICollection<Empresa> Empresas { get; set; }
         //public Guid EmpresaContratanteId { get; set; }
         //public EmpresaContratante EmpresaContratante { get; set; }
     }

@@ -10,11 +10,11 @@ namespace DevIO.Api.Configuration
     {
         public AutomapperConfig()
         {
-            CreateMap<ModuloAtivo, ModuloAtivoViewModel>().ReverseMap();
+            CreateMap<ModuloEmpresa, ModuloAtivoViewModel>().ReverseMap();
             CreateMap<Pagamento, PagamentoViewModel>().ReverseMap();
             CreateMap<Usuario, PerfilUsuarioMasterAdminViewModel>().ReverseMap();
             CreateMap<RepresentanteLegal, RepresentanteLegalViewModel>().ReverseMap();
-            CreateMap<Senha, SenhaViewModel>().ReverseMap();
+            CreateMap<LoginUsuario, SenhaViewModel>().ReverseMap();
           //  CreateMap<ProdutoViewModel, Produto>();
           //
           //  CreateMap<ProdutoImagemViewModel, Produto>().ReverseMap();

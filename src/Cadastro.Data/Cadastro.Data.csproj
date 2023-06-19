@@ -19,5 +19,10 @@
 		<ItemGroup>
 		  <ProjectReference Include="..\Cadastro.Business\Cadastro.Business.csproj" />
 		</ItemGroup>
+
+		<ItemGroup>
+		  <Folder Include="Migrations\" />
+		  <Folder Include="Scripts\" />
+		</ItemGroup>
 		
 </Project>

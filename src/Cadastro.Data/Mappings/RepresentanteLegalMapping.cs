@@ -37,7 +37,21 @@ namespace Cadastro.Data.Mappings
                 .IsRequired()
                 .HasColumnType("varchar(200)");
 
-          
+            builder.Property(p => p.Ativo)
+                        .IsRequired()
+                        .HasColumnType("bit");
+
+            builder.Property(p => p.DataCadastro)
+                .IsRequired()
+                .HasColumnType("datetime");
+
+            builder.Property(p => p.DataAlteracao)
+                .HasColumnType("datetime");
+
+            builder.Property(p => p.DataInativacao)
+                .HasColumnType("datetime");
+
+
         }
     }
 

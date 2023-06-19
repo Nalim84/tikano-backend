@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Cadastro.Business.Models
 {
-    internal class Fuso
+    public class Fuso :Entity
     {
+        public string Nome { get; set; }
+        public ICollection<Usuario> Usuarios { get; set; }
+
     }
 }

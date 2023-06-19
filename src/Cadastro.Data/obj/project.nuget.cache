@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9cK0kaqNm5zDnBSVrjk1oIg14f4wCi3W+bxLgKDneOXkmqCUJRNLf0ii9yb+C6Ph8rkI43wI/A5cglInD+fSVw==",
+  "dgSpecHash": "dHZXb9D63xq6d2I7kKFpwkDBRWsbhmO2DwLzcLxbPZL+YopyWGPnOmXMp/tkr8vYAqswziCZno9wi0X7YAaNpQ==",
   "success": true,
-  "projectFilePath": "C:\\ProjetoTikano\\tikano-backend-main\\tikano-backend-main\\src\\Cadastro.Data\\Cadastro.Data.csproj",
+  "projectFilePath": "C:\\ProjetoTikano\\tikano-backend\\src\\Cadastro.Data\\Cadastro.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ALEX\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\ALEX\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",

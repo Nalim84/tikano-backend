@@ -1,8 +1,8 @@
 ﻿namespace Cadastro.Business.Models
 {
-    public class SegmentoEmpresa : Entity
+    public class Segmento : Entity
     {
         public string Nome { get; set; }
-        public bool Ativo{ get; set; }
+        public ICollection<Empresa> Empresas { get;set; }
     }
 }
