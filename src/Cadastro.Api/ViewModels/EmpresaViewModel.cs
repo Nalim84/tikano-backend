@@ -9,6 +9,6 @@ namespace Cadastro.Api.ViewModels
         public PagamentoViewModel Pagamento { get; set; }
         public PerfilUsuarioMasterAdminViewModel PerfilUsuarioMasterAdmin { get; set; }
         public RepresentanteLegalViewModel RepresentanteLegal { get; set; }
-        public SenhaViewModel Senha { get; set; }
+        //public SenhaViewModel Senha { get; set; }
     }
 }

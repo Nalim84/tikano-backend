@@ -28,12 +28,23 @@ namespace Cadastro.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<decimal>("Aliquota")
+                        .HasColumnType("decimal(10,2)");
+
+                    b.Property<string>("Anexo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)");
+
                     b.Property<string>("Atividade")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(1000)");
 
                     b.Property<bool>("Ativo")
                         .HasColumnType("bit");
+
+                    b.Property<string>("Codigo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<DateTime?>("DataAlteracao")
                         .HasColumnType("datetime");
@@ -43,6 +54,9 @@ namespace Cadastro.Data.Migrations
 
                     b.Property<DateTime?>("DataInativacao")
                         .HasColumnType("datetime");
+
+                    b.Property<bool>("FatorR")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 
@@ -352,7 +366,11 @@ namespace Cadastro.Data.Migrations
 
                     b.Property<string>("Nome")
                         .IsRequired()
-                        .HasColumnType("varchar(100)");
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Sigla")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)");
 
                     b.HasKey("Id");
 
@@ -860,6 +878,9 @@ namespace Cadastro.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
+                    b.Property<Guid>("UtcId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("FusoId");
@@ -872,7 +893,45 @@ namespace Cadastro.Data.Migrations
 
                     b.HasIndex("PerfilId");
 
+                    b.HasIndex("UtcId")
+                        .IsUnique();
+
                     b.ToTable("Usuarios", (string)null);
+                });
+
+            modelBuilder.Entity("Cadastro.Business.Models.UTC", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Abreviacao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(6)");
+
+                    b.Property<bool>("Ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("DataAlteracao")
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime>("DataCadastro")
+                        .HasColumnType("datetime");
+
+                    b.Property<DateTime?>("DataInativacao")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Descricao")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("Offset")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(10)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UTC", (string)null);
                 });
 
             modelBuilder.Entity("Cadastro.Business.Models.Cidade", b =>
@@ -1069,6 +1128,11 @@ namespace Cadastro.Data.Migrations
                         .HasForeignKey("PerfilId")
                         .IsRequired();
 
+                    b.HasOne("Cadastro.Business.Models.UTC", "UTC")
+                        .WithOne("Usuario")
+                        .HasForeignKey("Cadastro.Business.Models.Usuario", "UtcId")
+                        .IsRequired();
+
                     b.Navigation("Fuso");
 
                     b.Navigation("Idioma");
@@ -1076,6 +1140,8 @@ namespace Cadastro.Data.Migrations
                     b.Navigation("LoginUsuario");
 
                     b.Navigation("Perfil");
+
+                    b.Navigation("UTC");
                 });
 
             modelBuilder.Entity("Cadastro.Business.Models.AtividadePrincipal", b =>
@@ -1192,6 +1258,12 @@ namespace Cadastro.Data.Migrations
                         .IsRequired();
 
                     b.Navigation("ModulosUsuario");
+                });
+
+            modelBuilder.Entity("Cadastro.Business.Models.UTC", b =>
+                {
+                    b.Navigation("Usuario")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

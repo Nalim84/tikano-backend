@@ -8,6 +8,7 @@ namespace Cadastro.Business.Models
 {
     public class Idioma :Entity
     {
+        public string Sigla { get; set; }
         public string Nome { get; set; }
         public Usuario Usuario { get; set; }
     }

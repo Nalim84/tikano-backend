@@ -1,5 +1,7 @@
+
 -- Inserir país
 DECLARE @PaisId uniqueidentifier = NEWID()
+DECLARE @EstadoId uniqueidentifier = NEWID()
 
 INSERT INTO [dbo].[Paises] ([Id], [Nome], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
 VALUES (@PaisId, 'Brasil', 1, GETDATE(), NULL, NULL)
@@ -466,7 +468,6 @@ VALUES (NEWID(), @PaisId, @EstadoId, 'União dos Palmares', 1, GETDATE(), NULL, N
 INSERT INTO [dbo].[Cidades] ([Id], [PaisId], [EstadoId], [Nome], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
 VALUES (NEWID(), @PaisId, @EstadoId, 'Viçosa', 1, GETDATE(), NULL, NULL)
 
-
 --AMAPÁ
 SET @EstadoId = (SELECT [Id] FROM [dbo].[Estados] WHERE [Nome] = 'Amapá')
 
@@ -518,7 +519,6 @@ VALUES (NEWID(), @PaisId, @EstadoId, 'Tartarugalzinho', 1, GETDATE(), NULL, NULL
 
 INSERT INTO [dbo].[Cidades] ([Id], [PaisId], [EstadoId], [Nome], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
 VALUES (NEWID(), @PaisId, @EstadoId, 'Vitória do Jari', 1, GETDATE(), NULL, NULL)
-
 
 --AMAZONAS
 SET @EstadoId = (SELECT [Id] FROM [dbo].[Estados] WHERE [Nome] = 'Amazonas')
@@ -3229,7 +3229,7 @@ VALUES
 SET @EstadoId = (SELECT [Id] FROM [dbo].[Estados] WHERE [Nome] = 'Goiás')
 
 -- Inserindo as cidades do Goiás
-INSERT INTO Cidade
+INSERT INTO [dbo].[Cidades]
     (Id, Nome, PaisId, EstadoId, Ativo, DataCadastro)
 VALUES
     (NEWID(), 'Abadia de Goiás', @PaisId, @EstadoId, 1, GETDATE()),
@@ -3483,7 +3483,7 @@ VALUES
 SET @EstadoId = (SELECT [Id] FROM [dbo].[Estados] WHERE [Nome] = 'Maranhão')
 
 -- Inserindo as cidades do Maranhão
-INSERT INTO Cidades (id, nome, paisId, estadoId, ativo, dataCadastro) VALUES
+INSERT INTO  [dbo].[Cidades] (id, nome, paisId, estadoId, ativo, dataCadastro) VALUES
     (NEWID(), 'Açailândia', @PaisId, @EstadoId, 1, GETDATE()),
     (NEWID(), 'Afonso Cunha', @PaisId, @EstadoId, 1, GETDATE()),
     (NEWID(), 'Água Doce do Maranhão', @PaisId, @EstadoId, 1, GETDATE()),
@@ -3706,8 +3706,8 @@ INSERT INTO Cidades (id, nome, paisId, estadoId, ativo, dataCadastro) VALUES
 SET @EstadoId = (SELECT [Id] FROM [dbo].[Estados] WHERE [Nome] = 'Mato Grosso')
 
 -- Inserindo as cidades do Mato Grosso
-INSERT INTO Cidade
-    (Id, Nome, PaisId, EstadoId, Ativo, DataCriacao)
+INSERT INTO [dbo].[Cidades]
+    (Id, Nome, PaisId, EstadoId, Ativo, DataCadastro)
 VALUES
     (NEWID(), 'Acorizal', @PaisId, @EstadoId, 1, GETDATE()),
     (NEWID(), 'Água Boa', @PaisId, @EstadoId, 1, GETDATE()),
@@ -3824,9 +3824,9 @@ VALUES
     (NEWID(), 'Santa Carmem', @PaisId, @EstadoId, 1, GETDATE()),
     (NEWID(), 'Santa Cruz do Xingu', @PaisId, @EstadoId, 1, GETDATE()),
     (NEWID(), 'Santa Rita do Trivelato', @PaisId, @EstadoId, 1, GETDATE()),
-    (NEWID(), 'Santa Terezinha', @PaisId, @EstadoId, 1, GETDATE()),
+    (NEWID(), 'Santa Terezinha', @PaisId, @EstadoId, 1, GETDATE());
 
-    INSERT INTO Cidades (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro)
+    INSERT INTO [dbo].[Cidades] (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro)
 VALUES
     (NEWID(), @PaisId, @EstadoId, 'Santo Afonso', 1, GETDATE()),
     (NEWID(), @PaisId, @EstadoId, 'Santo Antônio do Leste', 1, GETDATE()),
@@ -3852,7 +3852,7 @@ VALUES
     (NEWID(), @PaisId, @EstadoId, 'Várzea Grande', 1, GETDATE()),
     (NEWID(), @PaisId, @EstadoId, 'Vera', 1, GETDATE()),
     (NEWID(), @PaisId, @EstadoId, 'Vila Bela da Santíssima Trindade', 1, GETDATE()),
-    (NEWID(), @PaisId, @EstadoId, 'Vila Rica', 1, GETDATE())
+    (NEWID(), @PaisId, @EstadoId, 'Vila Rica', 1, GETDATE());
 
 --MATO GROSSO DO SUL
 SET @EstadoId = (SELECT [Id] FROM [dbo].[Estados] WHERE [Nome] = 'Mato Grosso do Sul')
@@ -3938,7 +3938,7 @@ VALUES
     (NEWID(), @PaisId, @EstadoId, 'Taquarussu', 1, GETDATE()),
     (NEWID(), @PaisId, @EstadoId, 'Terenos', 1, GETDATE()),
     (NEWID(), @PaisId, @EstadoId, 'Três Lagoas', 1, GETDATE()),
-    (NEWID(), @PaisId, @EstadoId, 'Vicentina', 1, GETDATE())
+    (NEWID(), @PaisId, @EstadoId, 'Vicentina', 1, GETDATE());
 
 
 --MINAS GERAIS
@@ -5168,9 +5168,9 @@ VALUES (NEWID(), @PaisId, @EstadoId, 'Frutal', 1, GETDATE());
 
 -- Funilândia
 INSERT INTO [dbo].[Cidades] ([Id], [PaisId], [EstadoId], [Nome], [Ativo], [DataCadastro])
-VALUES (NEWID(), (SELECT [Id]
+VALUES (NEWID(), @PaisId, @EstadoId, 'Funilândia', 1, GETDATE());
 
-INSERT INTO Cidades (Id, Nome, PaisId, EstadoId, Ativo, DataCadastro, DataAlteracao, DataInativacao)
+INSERT INTO [dbo].[Cidades] (Id, Nome, PaisId, EstadoId, Ativo, DataCadastro, DataAlteracao, DataInativacao)
 VALUES
     (NEWID(), 'Galiléia', @PaisId, @EstadoId, 1, GETDATE(), NULL, NULL),
     (NEWID(), 'Gameleiras', @PaisId, @EstadoId, 1, GETDATE(), NULL, NULL),
@@ -5721,12 +5721,13 @@ VALUES
 
 
 
+
 --PARÁ
 -- Municípios de Pará
 
 SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Pará');
 -- Inserir cidades
-INSERT INTO Cidades (Id, Nome, PaisId, EstadoId, Ativo, DataCadastro, DataAlteracao, DataInativacao)
+INSERT INTO [dbo].[Cidades] (Id, Nome, PaisId, EstadoId, Ativo, DataCadastro, DataAlteracao, DataInativacao)
 VALUES
     (NEWID(), 'Abaetetuba', @PaisId, @EstadoId, 1, GETDATE(), NULL, NULL),
     (NEWID(), 'Abel Figueiredo', @PaisId, @EstadoId, 1, GETDATE(), NULL, NULL),
@@ -6101,7 +6102,8 @@ VALUES (NEWID(), @PaisId, @EstadoId, 'Água Branca', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Várzea', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Vieirópolis', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Vista Serrana', 1, GETDATE(), NULL, NULL),
-    (NEWID(), @PaisId, @EstadoId, 'Zabelê', 1, GETDATE(), NULL, NULL)
+    (NEWID(), @PaisId, @EstadoId, 'Zabelê', 1, GETDATE(), NULL, NULL);
+
 
     
 --PARANÁ
@@ -6510,9 +6512,8 @@ VALUES
     (NEWID(), @PaisId, @EstadoId, 'Vitorino', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Wenceslau Braz', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Xambrê', 1, GETDATE(), NULL, NULL);
-
-
-    
+	
+	
 --PERNAMBUCO
 -- Municípios de Pernambuco
 
@@ -6536,9 +6537,7 @@ VALUES
     (NEWID(), @PaisId, @EstadoId, 'Araripina', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Arcoverde', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Barra de Guabiraba', 1, GETDATE(), NULL, NULL),
-    (NEWID(), @PaisId, @EstadoId, 'Barre
-
-iros', 1, GETDATE(), NULL, NULL),
+    (NEWID(), @PaisId, @EstadoId, 'Barreiros', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Belém de Maria', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Belém do São Francisco', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Belo Jardim', 1, GETDATE(), NULL, NULL),
@@ -6564,9 +6563,7 @@ iros', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Camutanga', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Canhotinho', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Capoeiras', 1, GETDATE(), NULL, NULL),
-    (NEWID(), @P
-
-aisId, @EstadoId, 'Carnaíba', 1, GETDATE(), NULL, NULL),
+    (NEWID(), @PaisId, @EstadoId, 'Carnaíba', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Carnaubeira da Penha', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Carpina', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Caruaru', 1, GETDATE(), NULL, NULL),
@@ -6592,9 +6589,7 @@ aisId, @EstadoId, 'Carnaíba', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Frei Miguelinho', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Gameleira', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Garanhuns', 1, GETDATE(), NULL, NULL),
-    (NEWID(), @PaisId, @
-
-EstadoId, 'Glória do Goitá', 1, GETDATE(), NULL, NULL),
+    (NEWID(), @PaisId, @EstadoId, 'Glória do Goitá', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Goiana', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Granito', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Gravatá', 1, GETDATE(), NULL, NULL),
@@ -6619,9 +6614,7 @@ EstadoId, 'Glória do Goitá', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Jataúba', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Jatobá', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'João Alfredo', 1, GETDATE(), NULL, NULL),
-    (NEWID(), @PaisId, @EstadoId, 'Joaquim Nabuco', 1, GETDATE(), NULL, NULL
-
-),
+    (NEWID(), @PaisId, @EstadoId, 'Joaquim Nabuco', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Jucati', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Jupi', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Jurema', 1, GETDATE(), NULL, NULL),
@@ -6647,9 +6640,7 @@ EstadoId, 'Glória do Goitá', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Palmares', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Palmeirina', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Panelas', 1, GETDATE(), NULL, NULL),
-    (NEWID(), @PaisId, @EstadoId, 'Paranatama', 1, GETDATE(), NULL,
-
- NULL),
+    (NEWID(), @PaisId, @EstadoId, 'Paranatama', 1, GETDATE(), NULL,NULL),
     (NEWID(), @PaisId, @EstadoId, 'Parnamirim', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Passira', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Paudalho', 1, GETDATE(), NULL, NULL),
@@ -6676,9 +6667,7 @@ EstadoId, 'Glória do Goitá', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Santa Cruz da Baixa Verde', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Santa Cruz do Capibaribe', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Santa Filomena', 1, GETDATE(), NULL, NULL),
-   
-
- (NEWID(), @PaisId, @EstadoId, 'Santa Maria da Boa Vista', 1, GETDATE(), NULL, NULL),
+    (NEWID(), @PaisId, @EstadoId, 'Santa Maria da Boa Vista', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Santa Maria do Cambucá', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Santa Terezinha', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'São Benedito do Sul', 1, GETDATE(), NULL, NULL),
@@ -6702,9 +6691,7 @@ EstadoId, 'Glória do Goitá', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Tacaratu', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Tamandaré', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Taquaritinga do Norte', 1, GETDATE(), NULL, NULL),
-    (NEWID(), @PaisId, @EstadoId, 'Terezinha', 1, GETDATE(), NULL, NULL
-
-),
+    (NEWID(), @PaisId, @EstadoId, 'Terezinha', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Terra Nova', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Timbaúba', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Toritama', 1, GETDATE(), NULL, NULL),
@@ -6728,7 +6715,7 @@ EstadoId, 'Glória do Goitá', 1, GETDATE(), NULL, NULL),
 SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Piauí' AND PaisId = @PaisId);
 
 -- Insert into Cidades
-INSERT INTO Cidades (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro, DataAlteracao, DataInativacao)
+INSERT INTO [dbo].[Cidades] (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro, DataAlteracao, DataInativacao)
 VALUES 
     (NEWID(), @PaisId, @EstadoId, 'Acauã', 1, GETDATE(), NULL, NULL),
     (NEWID(), @PaisId, @EstadoId, 'Agricolândia', 1, GETDATE(), NULL, NULL),
@@ -7136,7 +7123,7 @@ VALUES
 
     --RIO GRANDE DO SUL
 -- Cidades do Rio Grande do Sul
-SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Rio do Janeiro' AND PaisId = @PaisId);
+SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Rio Grande do Sul' AND PaisId = @PaisId);
 
 INSERT INTO [dbo].[Cidades] ([Id], [PaisId], [EstadoId], [Nome], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
 VALUES
@@ -7641,7 +7628,7 @@ VALUES
 
     --RIO DE JANEIRO
 -- Cidades do Rio do Janeiro
-SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Rio do Janeiro' AND PaisId = @PaisId);
+SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Rio de Janeiro' AND PaisId = @PaisId);
 
 INSERT INTO [dbo].[Cidades] ([Id], [PaisId], [EstadoId], [Nome], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
 VALUES
@@ -7737,6 +7724,7 @@ VALUES
 (NEWID(), @PaisId, @EstadoId, 'Varre-Sai', 1, GETDATE(), NULL, NULL),
 (NEWID(), @PaisId, @EstadoId, 'Vassouras', 1, GETDATE(), NULL, NULL),
 (NEWID(), @PaisId, @EstadoId, 'Volta Redonda', 1, GETDATE(), NULL, NULL);
+
 
     --RONDÔNIA
 -- Cidades do Rondônia
@@ -8131,7 +8119,7 @@ VALUES
 -- Cidades do Sergipe
 SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'São Paulo' AND PaisId = @PaisId);
 
-INSERT INTO Cidades (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro, DataAlteracao, DataInativacao)
+INSERT INTO [dbo].[Cidades]  (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro, DataAlteracao, DataInativacao)
 VALUES
 	(NEWID(), @PaisId, @EstadoId, 'Adamantina', 1, GETDATE(), NULL, NULL),
 	(NEWID(), @PaisId, @EstadoId, 'Adolfo', 1, GETDATE(), NULL, NULL),
@@ -8784,7 +8772,7 @@ VALUES
 -- Cidades do Sergipe
 SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Sergipe' AND PaisId = @PaisId);
 
-INSERT INTO Cidades (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro, DataAlteracao, DataInativacao)
+INSERT INTO [dbo].[Cidades] (Id, PaisId, EstadoId, Nome, Ativo, DataCadastro, DataAlteracao, DataInativacao)
 VALUES
 	(NEWID(), @PaisId, @EstadoId, 'Amparo do São Francisco', 1, GETDATE(), NULL, NULL),
 	(NEWID(), @PaisId, @EstadoId, 'Aquidabã', 1, GETDATE(), NULL, NULL),
@@ -8866,7 +8854,7 @@ VALUES
 
 
 
-    --TOCANTINS
+--TOCANTINS
 -- Cidades do Tocantins
 SET @EstadoId = (SELECT Id FROM Estados WHERE Nome = 'Tocantins' AND PaisId = @PaisId);
 

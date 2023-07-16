@@ -14,12 +14,14 @@
         public Guid FusoId { get; set; }
         public Guid EmpresaId { get; set; }
         public Guid IdiomaId { get; set; }
+        public Guid UtcId { get; set; }
 
         public LoginUsuario LoginUsuario { get; set; }
         public Perfil Perfil { get; set; }
         public Fuso Fuso { get; set; }
         public Empresa Empresa { get; set; }
         public Idioma Idioma { get; set; }
+        public UTC UTC { get; set; }
         public ICollection<ModuloUsuario> ModulosUsuario { get; set; }
     }
 }

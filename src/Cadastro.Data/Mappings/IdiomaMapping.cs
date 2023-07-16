@@ -13,9 +13,13 @@ namespace Cadastro.Data.Mappings
 
             builder.HasKey(p => p.Id);
 
+            builder.Property(p => p.Sigla)
+                .IsRequired()
+                .HasColumnType("nvarchar(10)");
+
             builder.Property(p => p.Nome)
                 .IsRequired()
-                .HasColumnType("varchar(100)");
+                .HasColumnType("nvarchar(100)");
 
             builder.Property(p => p.Ativo)
               .IsRequired()

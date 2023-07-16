@@ -13,9 +13,25 @@ namespace Cadastro.Data.Mappings
 
             builder.HasKey(p => p.Id);
 
+            builder.Property(p => p.Codigo)
+                .IsRequired()
+                .HasColumnType("nvarchar(20)");
+
             builder.Property(p => p.Atividade)
                 .IsRequired()
-                .HasColumnType("varchar(100)");
+                .HasColumnType("nvarchar(1000)");
+
+            builder.Property(p => p.Anexo)
+                .IsRequired()
+                .HasColumnType("nvarchar(10)");
+
+            builder.Property(p => p.FatorR)
+                .IsRequired()
+                .HasColumnType("bit");
+            
+            builder.Property(p => p.Aliquota)
+                .IsRequired()
+                .HasColumnType("decimal(10,2)");
 
             builder.Property(p => p.Ativo)
                 .IsRequired()

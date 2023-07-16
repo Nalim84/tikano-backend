@@ -21,8 +21,9 @@
 		</ItemGroup>
 
 		<ItemGroup>
-		  <Folder Include="Migrations\" />
-		  <Folder Include="Scripts\" />
+		  <None Update="Scripts\CARGA_INICIAL_PAIS_ESTADO_CIDADE.SQL">
+		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		  </None>
 		</ItemGroup>
 		
 </Project>

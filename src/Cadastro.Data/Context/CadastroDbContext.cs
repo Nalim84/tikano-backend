@@ -29,6 +29,7 @@ namespace Cadastro.Data.Context
         public DbSet<Marca> Marcas { get; set; }        
         public DbSet<Modulo> Modulos { get; set; }        
         public DbSet<ModuloEmpresa> ModulosAtivos { get; set; }        
+        public DbSet<ModuloUsuario> ModulosUsuarios { get; set; }        
         public DbSet<Pagamento> Pagamentos { get; set; }        
         public DbSet<Pais> Paises { get; set; }        
         public DbSet<Perfil> Perfis { get; set; }        
@@ -39,8 +40,8 @@ namespace Cadastro.Data.Context
         public DbSet<TamanhoEmpresa> TamanhosEmpresa { get; set; }        
         public DbSet<TipoEmpresa> TiposEmpresa { get; set; }        
         public DbSet<Usuario> Usuarios { get; set; }        
+        public DbSet<UTC> UTC { get; set; }        
      
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             foreach (var property in modelBuilder.Model.GetEntityTypes()

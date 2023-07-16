@@ -41,6 +41,9 @@ namespace Cadastro.Data.Mappings
             builder.Property(p => p.FusoId)
                 .HasColumnType("uniqueidentifier");
 
+              builder.Property(p => p.UtcId)
+                .HasColumnType("uniqueidentifier");
+
             builder.Property(p => p.Ativo)
                 .IsRequired()
                 .HasColumnType("bit");
@@ -75,6 +78,11 @@ namespace Cadastro.Data.Mappings
             builder.HasOne(p => p.Idioma)
             .WithOne(m => m.Usuario)
            .HasForeignKey<Usuario>(p => p.IdiomaId);
+
+            //USUARIO UTC
+            builder.HasOne(p => p.UTC)
+            .WithOne(m => m.Usuario)
+           .HasForeignKey<Usuario>(p => p.UtcId);
 
         }
     }
