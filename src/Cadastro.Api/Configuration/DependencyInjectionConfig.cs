@@ -2,6 +2,7 @@
 using Cadastro.Api.Extensions;
 using Cadastro.Business.Intefaces;
 using Cadastro.Business.Notificacoes;
+using Cadastro.Business.Services;
 using Cadastro.Data.Context;
 using Cadastro.Data.Repository;
 using Microsoft.Extensions.Options;
@@ -24,14 +25,18 @@ namespace Cadastro.Api.Configuration
             //
 
 
-          //  services.AddScoped<IEmpresaRepository,EmpresaRepository>();
+            services.AddScoped<IEmpresaService, EmpresaService>();
+            services.AddScoped<IEmpresaRepository,EmpresaRepository>();
             services.AddScoped<ITipoEmpresaRepository, TipoEmpresaRepository>();
             services.AddScoped<IPaisRepository, PaisRepository>();
             services.AddScoped<IEstadoRepository, EstadoRepository>();
+            services.AddScoped<ICidadeRepository, CidadeRepository>();
             services.AddScoped<IAtividadePrincipalRepository, AtividadePrincipalRepository>();
             services.AddScoped<ITamanhoEmpresaRepository, TamanhoEmpresaRepository>(); 
             services.AddScoped<IFaturamentoUltimoAnoEmpresaRepository, FaturamentoUltimoAnoEmpresaRepository>();
             services.AddScoped<ISegmentoRepository, SegmentoRepository>();
+            services.AddScoped<IModuloRepository, ModuloRepository>();
+            services.AddScoped<IQuantidadeFuncionarioRepository, QuantidadeFuncionarioRepository>();
 
 
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();

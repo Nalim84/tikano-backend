@@ -288,6 +288,7 @@ namespace Cadastro.Data.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Nome = table.Column<string>(type: "varchar(100)", nullable: false),
+                    Sigla = table.Column<string>(type: "varchar(2)", nullable: false),
                     PaisId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Ativo = table.Column<bool>(type: "bit", nullable: false),
                     DataCadastro = table.Column<DateTime>(type: "datetime", nullable: false),

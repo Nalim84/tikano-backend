@@ -1,4 +1,3 @@
-C:\ProjetoTikano\tikano-backend\src\Cadastro.Data\bin\Debug\net6.0\Scripts\CARGA_INICIAL_PAIS_ESTADO_CIDADE.SQL
 C:\ProjetoTikano\tikano-backend\src\Cadastro.Data\bin\Debug\net6.0\Cadastro.Data.deps.json
 C:\ProjetoTikano\tikano-backend\src\Cadastro.Data\bin\Debug\net6.0\Cadastro.Data.runtimeconfig.json
 C:\ProjetoTikano\tikano-backend\src\Cadastro.Data\bin\Debug\net6.0\Cadastro.Data.dll

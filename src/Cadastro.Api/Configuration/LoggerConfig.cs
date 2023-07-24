@@ -18,7 +18,7 @@ namespace Cadastro.Api.Configuration
                 {
                     options.ApiKey = "388dd3a277cb44c4aa128b5c899a3106";
                     options.LogId = new Guid("c468b2b8-b35d-4f1a-849d-f47b60eef096");
-                    options.HeartbeatId = "API Fornecedores";
+                    options.HeartbeatId = "API de Cadastro";
 
                 })
                 .AddCheck("Produtos", new SqlServerHealthCheck(configuration.GetConnectionString("DefaultConnection")))

@@ -18,10 +18,13 @@ namespace DevIO.Api.Configuration
             CreateMap<TipoEmpresa, TipoEmpresaViewModel>().ReverseMap();
             CreateMap<Pais, PaisViewModel>().ReverseMap();
             CreateMap<Estado, EstadoViewModel>().ReverseMap();
+            CreateMap<Cidade, CidadeViewModel>().ReverseMap();
             CreateMap<AtividadePrincipal, AtividadePrincipalViewModel>().ReverseMap();
             CreateMap<TamanhoEmpresa, TamanhoEmpresaViewModel>().ReverseMap();
             CreateMap<FaturamentoUltimoAnoEmpresa, FaturamentoUltimoAnoEmpresaViewModel>().ReverseMap();
             CreateMap<Segmento, SegmentoViewModel>().ReverseMap();
+            CreateMap<Modulo, ModuloViewModel>().ReverseMap();
+            CreateMap<QuantidadeFuncionarioEmpresa, QuantidadeFuncionarioViewModel>().ReverseMap();
             /*
         public ICollection<TipoEmpresaViewModel> TiposEmpresa { get; set; }
         public ICollection<PaisViewModel> Paises { get; set; }

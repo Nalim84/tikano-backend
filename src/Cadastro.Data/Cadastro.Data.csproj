@@ -21,8 +21,17 @@
 		</ItemGroup>
 
 		<ItemGroup>
+		  <None Update="Scripts\CARGAS_COMBO_EMPRESA.sql">
+		    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		  </None>
+		  <None Update="Scripts\CARGA_INICIAL_ATIVIDADES_EMPRESA.SQL">
+		    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		  </None>
 		  <None Update="Scripts\CARGA_INICIAL_PAIS_ESTADO_CIDADE.SQL">
-		    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+		  </None>
+		  <None Update="Scripts\CARGA_INICIAL_TIPO_EMPRESA.sql">
+		    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
 		  </None>
 		</ItemGroup>
 		

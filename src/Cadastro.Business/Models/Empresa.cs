@@ -33,7 +33,7 @@
         public Guid PaisId { get; set; }
         public Guid TipoEmpresaId { get; set; }
         public Guid SubstitutoTributarioId { get; set; }
-
+        public Guid InscricaoEstadualEstadoId { get; set; }
         //FK
         public ICollection<ModuloEmpresa> ModulosAtivos { get; set; }
 
@@ -51,5 +51,6 @@
         public Pais Pais { get; set; }
         public TipoEmpresa TipoEmpresa { get; set; }
         public SubstitutoTributario SubstitutoTributario { get; set; }
+        public Estado InscricaoEstadualEstado { get; set; }
     }
 }

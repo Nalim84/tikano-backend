@@ -10,5 +10,6 @@ namespace Cadastro.Business.Intefaces
     public interface ICidadeRepository : IRepository<Cidade>
     {
         Task<ICollection<Cidade>> ObterCidades();
+        Task<IEnumerable<Cidade>> ObterCidadesPorEstado(Guid estadoId);
     }
 }

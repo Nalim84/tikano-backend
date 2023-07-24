@@ -2,6 +2,9 @@
 using Cadastro.Api.Controllers;
 using Cadastro.Api.ViewModels;
 using Cadastro.Business.Intefaces;
+using Cadastro.Business.Models;
+using Cadastro.Business.Models.Validations.Documentos;
+using Cadastro.Business.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,7 +15,8 @@ namespace Cadastro.Api.V1.Controllers
     [Route("api/v{version:apiVersion}/empresas")]
     public class EmpresaController : MainController
     {
-     //   private readonly IEmpresaRepository _empresaRepository;
+        private readonly IEmpresaService _empresaService;
+        private readonly IEmpresaRepository _empresaRepository;
         private readonly ITipoEmpresaRepository _tipoEmpresaRepository;
         private readonly IPaisRepository _paisRepository;
         private readonly IEstadoRepository _estadoRepository;
@@ -20,13 +24,26 @@ namespace Cadastro.Api.V1.Controllers
         private readonly ITamanhoEmpresaRepository _tamanhoEmpresaRepository;
         private readonly IFaturamentoUltimoAnoEmpresaRepository _faturamentoUltimoAnoEmpresaRepository;
         private readonly ISegmentoRepository _segmentoRepository;
+        private readonly IModuloRepository _moduloRepository;
+        private readonly IQuantidadeFuncionarioRepository _quantidadeFuncionarioRepository;
         private readonly IMapper _mapper;
 
         public EmpresaController(
-            //IEmpresaRepository empresaRepository, 
-            ITipoEmpresaRepository tipoEmpresaRepository, IPaisRepository paisRepository, IEstadoRepository estadoRepository, IAtividadePrincipalRepository atividadePrincipalRepository, ITamanhoEmpresaRepository tamanhoEmpresaRepository, IFaturamentoUltimoAnoEmpresaRepository faturamentoUltimoAnoEmpresaRepository, ISegmentoRepository segmentoRepository, IMapper mapper)
+            IEmpresaService empresaService,
+            IEmpresaRepository empresaRepository,
+            ITipoEmpresaRepository tipoEmpresaRepository, 
+            IPaisRepository paisRepository, 
+            IEstadoRepository estadoRepository, 
+            IAtividadePrincipalRepository atividadePrincipalRepository, 
+            ITamanhoEmpresaRepository tamanhoEmpresaRepository, 
+            IFaturamentoUltimoAnoEmpresaRepository faturamentoUltimoAnoEmpresaRepository, 
+            ISegmentoRepository segmentoRepository, 
+            IModuloRepository moduloRepository, 
+            IQuantidadeFuncionarioRepository quantidadeFuncionarioRepository, 
+            IMapper mapper)
         {
-          //  _empresaRepository = empresaRepository;
+            _empresaService = empresaService;
+            _empresaRepository = empresaRepository;
             _tipoEmpresaRepository = tipoEmpresaRepository;
             _paisRepository = paisRepository;
             _estadoRepository = estadoRepository;
@@ -34,6 +51,8 @@ namespace Cadastro.Api.V1.Controllers
             _tamanhoEmpresaRepository = tamanhoEmpresaRepository;
             _faturamentoUltimoAnoEmpresaRepository = faturamentoUltimoAnoEmpresaRepository;
             _segmentoRepository = segmentoRepository;
+            _moduloRepository = moduloRepository;
+            _quantidadeFuncionarioRepository = quantidadeFuncionarioRepository;
             _mapper = mapper;
         }
 
@@ -56,7 +75,7 @@ namespace Cadastro.Api.V1.Controllers
             empresaTelaViewModel.AtividadesPrincipais =
                 _mapper.Map<ICollection<AtividadePrincipalViewModel>>(await _atividadePrincipalRepository.ObterAtividadesPrincipais());
 
-            empresaTelaViewModel.TamanhoEmpresa =
+            empresaTelaViewModel.TamanhosEmpresa =
                 _mapper.Map<ICollection<TamanhoEmpresaViewModel>>(await _tamanhoEmpresaRepository.ObterTamanhoEmpresaRepository());
 
             empresaTelaViewModel.FaturamentoUltimoAnoEmpresa =
@@ -64,23 +83,36 @@ namespace Cadastro.Api.V1.Controllers
 
             empresaTelaViewModel.Segmentos =
                 _mapper.Map<ICollection<SegmentoViewModel>>(await _segmentoRepository.ObterSegmentos());
+            
+            empresaTelaViewModel.Modulos =
+                _mapper.Map<ICollection<ModuloViewModel>>(await _moduloRepository.ObterModulos());
+              
+            empresaTelaViewModel.QuantidadesFuncionario =
+                _mapper.Map<ICollection<QuantidadeFuncionarioViewModel>>(await _quantidadeFuncionarioRepository.ObterQuantidadeFuncionarioEmpresa());
 
             if (empresaTelaViewModel.TiposEmpresa == null) return NotFound();
-
             if (empresaTelaViewModel.Paises == null) return NotFound();
-
             if (empresaTelaViewModel.Estados == null) return NotFound();
-
             if (empresaTelaViewModel.AtividadesPrincipais == null) return NotFound();
-
-            if (empresaTelaViewModel.TamanhoEmpresa == null) return NotFound();
-
+            if (empresaTelaViewModel.TamanhosEmpresa == null) return NotFound();
             if (empresaTelaViewModel.FaturamentoUltimoAnoEmpresa == null) return NotFound();
-
             if (empresaTelaViewModel.Segmentos == null) return NotFound();
+            if (empresaTelaViewModel.Modulos == null) return NotFound();
+            if (empresaTelaViewModel.QuantidadesFuncionario == null) return NotFound();
 
             return empresaTelaViewModel;
 
+        }
+
+        [AllowAnonymous]
+        [HttpPost]
+        public async Task<ActionResult<EmpresaViewModel>> Adicionar(EmpresaViewModel empresaViewModel)
+        {
+            if (!ModelState.IsValid) return CustomResponse(ModelState);
+
+            await _empresaService.Adicionar(_mapper.Map<Empresa>(empresaViewModel));
+
+            return CustomResponse(empresaViewModel);
         }
     }
 }

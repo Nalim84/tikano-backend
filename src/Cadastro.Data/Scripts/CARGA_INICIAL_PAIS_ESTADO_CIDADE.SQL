@@ -7,86 +7,87 @@ INSERT INTO [dbo].[Paises] ([Id], [Nome], [Ativo], [DataCadastro], [DataAlteraca
 VALUES (@PaisId, 'Brasil', 1, GETDATE(), NULL, NULL)
 
 -- Inserir estados do Brasil
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Acre', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Acre', @PaisId, 1, GETDATE(), NULL, NULL,'AC')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Alagoas', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Alagoas', @PaisId, 1, GETDATE(), NULL, NULL,'AL')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Amapá', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Amapá', @PaisId, 1, GETDATE(), NULL, NULL,'AP')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Amazonas', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Amazonas', @PaisId, 1, GETDATE(), NULL, NULL,'AM')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Bahia', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Bahia', @PaisId, 1, GETDATE(), NULL, NULL,'BA')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Ceará', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Ceará', @PaisId, 1, GETDATE(), NULL, NULL,'CE')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Distrito Federal', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Distrito Federal', @PaisId, 1, GETDATE(), NULL, NULL,'DF')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Espírito Santo', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Espírito Santo', @PaisId, 1, GETDATE(), NULL, NULL,'ES')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Goiás', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Goiás', @PaisId, 1, GETDATE(), NULL, NULL,'GO')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Maranhão', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Maranhão', @PaisId, 1, GETDATE(), NULL, NULL,'MA')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Mato Grosso', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Mato Grosso', @PaisId, 1, GETDATE(), NULL, NULL,'MT')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Mato Grosso do Sul', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Mato Grosso do Sul', @PaisId, 1, GETDATE(), NULL, NULL,'MS')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Minas Gerais', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Minas Gerais', @PaisId, 1, GETDATE(), NULL, NULL,'MG')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Pará', @PaisId, 1, GETDATE(), NULL, NULL)
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Paraíba', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Pará', @PaisId, 1, GETDATE(), NULL, NULL,'PA')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Paraná', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Paraíba', @PaisId, 1, GETDATE(), NULL, NULL,'PB')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Pernambuco', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Paraná', @PaisId, 1, GETDATE(), NULL, NULL,'PR')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Piauí', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Pernambuco', @PaisId, 1, GETDATE(), NULL, NULL,'PE')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Rio de Janeiro', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Piauí', @PaisId, 1, GETDATE(), NULL, NULL,'PI')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Rio Grande do Norte', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Rio de Janeiro', @PaisId, 1, GETDATE(), NULL, NULL,'RJ')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Rio Grande do Sul', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Rio Grande do Norte', @PaisId, 1, GETDATE(), NULL, NULL,'RN')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Rondônia', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Rio Grande do Sul', @PaisId, 1, GETDATE(), NULL, NULL,'RS')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Roraima', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Rondônia', @PaisId, 1, GETDATE(), NULL, NULL,'RO')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Santa Catarina', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Roraima', @PaisId, 1, GETDATE(), NULL, NULL,'RR')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'São Paulo', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Santa Catarina', @PaisId, 1, GETDATE(), NULL, NULL,'SC')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Sergipe', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'São Paulo', @PaisId, 1, GETDATE(), NULL, NULL,'SP')
 
-INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao])
-VALUES (NEWID(), 'Tocantins', @PaisId, 1, GETDATE(), NULL, NULL)
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Sergipe', @PaisId, 1, GETDATE(), NULL, NULL,'SE')
+
+INSERT INTO [dbo].[Estados] ([Id], [Nome], [PaisId], [Ativo], [DataCadastro], [DataAlteracao], [DataInativacao],[Sigla])
+VALUES (NEWID(), 'Tocantins', @PaisId, 1, GETDATE(), NULL, NULL,'TO')
 
 --ACRE
 SET @EstadoId = (SELECT [Id] FROM [dbo].[Estados] WHERE [Nome] = 'Acre')

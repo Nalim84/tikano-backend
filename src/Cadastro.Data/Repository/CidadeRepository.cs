@@ -16,5 +16,14 @@ namespace Cadastro.Data.Repository
                       .OrderBy(o => o.Nome)
                           .ToListAsync();
         }
+
+        public async Task<IEnumerable<Cidade>> ObterCidadesPorEstado(Guid estadoId)
+        {
+            return await Db.Cidades
+                    .Where(wh => wh.EstadoId == estadoId)
+                     .AsNoTracking()
+                         .OrderBy(o => o.Nome)
+                             .ToListAsync();
+        }
     }
 }

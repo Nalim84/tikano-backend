@@ -89,3 +89,22 @@ INSERT INTO [dbo].[Modulos]
 		   (NEWID(), 'Módulo Gestão de Vendas' ,1 ,GETDATE() ,NULL ,NULL),
 		   (NEWID(), 'Módulo Customer Success' ,1 ,GETDATE() ,NULL ,NULL);
 GO
+
+INSERT INTO [dbo].[QuantidadesFuncionariosEmpresa]
+ ([Id]
+           ,[Nome]
+           ,[Ativo]
+           ,[DataCadastro]
+           ,[DataAlteracao]
+           ,[DataInativacao])
+     VALUES
+           (NEWID(), 'Até 9 empregados' ,1 ,GETDATE() ,NULL ,NULL),
+           (NEWID(), 'até 19 empregados' ,1 ,GETDATE() ,NULL ,NULL),
+           (NEWID(), 'de 10 a 49 empregados' ,1 ,GETDATE() ,NULL ,NULL),
+           (NEWID(), 'de 20 a 99 empregados' ,1 ,GETDATE() ,NULL ,NULL),
+           (NEWID(), 'de 50 a 99 empregados' ,1 ,GETDATE() ,NULL ,NULL),
+           (NEWID(), 'de 100 a 499 empregados' ,1 ,GETDATE() ,NULL ,NULL),
+           (NEWID(), 'mais de 100 empregados' ,1 ,GETDATE() ,NULL ,NULL),
+           (NEWID(), 'mais de 500 empregados' ,1 ,GETDATE() ,NULL ,NULL);
+
+GO

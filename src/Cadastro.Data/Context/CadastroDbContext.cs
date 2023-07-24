@@ -33,7 +33,7 @@ namespace Cadastro.Data.Context
         public DbSet<Pagamento> Pagamentos { get; set; }        
         public DbSet<Pais> Paises { get; set; }        
         public DbSet<Perfil> Perfis { get; set; }        
-        public DbSet<QuantidadeFuncionarioEmpresa> QuantidadesFuncionariosEmpresaMapping { get; set; }        
+        public DbSet<QuantidadeFuncionarioEmpresa> QuantidadesFuncionariosEmpresa { get; set; }        
         public DbSet<RepresentanteLegal> RepresentantesLegais { get; set; }        
         public DbSet<Segmento> Segmentos { get; set; }        
         public DbSet<SubstitutoTributario> SubstitutosTributario { get; set; }        

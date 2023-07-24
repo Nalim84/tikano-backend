@@ -100,6 +100,11 @@ namespace Cadastro.Data.Mappings
             builder.HasOne(p => p.Estado)
             .WithMany(m => m.Empresas)
             .OnDelete(DeleteBehavior.Cascade);
+             
+            //EMPRESA INSCRICAO_ESTADUAL_ESTADO
+            builder.HasOne(p => p.InscricaoEstadualEstado)
+            .WithMany(m => m.EmpresasInscricaoEstadual)
+            .OnDelete(DeleteBehavior.Cascade);
 
               //EMPRESA CIDADE
             builder.HasOne(p => p.Cidade)

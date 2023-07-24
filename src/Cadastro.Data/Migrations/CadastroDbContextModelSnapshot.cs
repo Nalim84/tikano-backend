@@ -166,6 +166,9 @@ namespace Cadastro.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(100)");
 
+                    b.Property<Guid>("InscricaoEstadualEstadoId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("InscricaoMunicipal")
                         .IsRequired()
                         .HasColumnType("varchar(100)");
@@ -235,6 +238,8 @@ namespace Cadastro.Data.Migrations
                     b.HasIndex("EstadoId");
 
                     b.HasIndex("FaturamentoUltimoAnoEmpresaId");
+
+                    b.HasIndex("InscricaoEstadualEstadoId");
 
                     b.HasIndex("MarcaId");
 
@@ -973,6 +978,11 @@ namespace Cadastro.Data.Migrations
                         .HasForeignKey("FaturamentoUltimoAnoEmpresaId")
                         .IsRequired();
 
+                    b.HasOne("Cadastro.Business.Models.Estado", "InscricaoEstadualEstado")
+                        .WithMany("EmpresasInscricaoEstadual")
+                        .HasForeignKey("InscricaoEstadualEstadoId")
+                        .IsRequired();
+
                     b.HasOne("Cadastro.Business.Models.Marca", "Marca")
                         .WithMany("Empresas")
                         .HasForeignKey("MarcaId")
@@ -1025,6 +1035,8 @@ namespace Cadastro.Data.Migrations
                     b.Navigation("Estado");
 
                     b.Navigation("FaturamentoUltimoAnoEmpresa");
+
+                    b.Navigation("InscricaoEstadualEstado");
 
                     b.Navigation("Marca");
 
@@ -1167,6 +1179,8 @@ namespace Cadastro.Data.Migrations
                     b.Navigation("Cidades");
 
                     b.Navigation("Empresas");
+
+                    b.Navigation("EmpresasInscricaoEstadual");
 
                     b.Navigation("SubstitutoTributario")
                         .IsRequired();
